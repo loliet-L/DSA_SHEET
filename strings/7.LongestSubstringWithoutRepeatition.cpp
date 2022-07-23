@@ -34,3 +34,31 @@ int lengthOfLongestSubstring(string s) {
 	}
 	return longest;
 }
+
+//ANOTHER SOLUTION O(n) TIME COMPLEXITY
+
+int SubsequenceLength (string str) 
+    {
+        int n = str.size();
+        int maxLength = 0;
+        int currLength = 0;
+        int freq[26]={0};
+        int i = 0 ,j=0;
+        while(i<n){
+            if(freq[str[i]-'a']==0)//CHECKING THE ELEMENT EXIST IN THE MAP IF NOT THEN ADD IT
+			{
+                freq[str[i]-'a']++; 
+                i++;
+                currLength++;
+            }
+            else{
+                freq[str[j]-'a']--;//IF IT EXISTS THEN DECREMENT IT INCREASE
+				j++;                   // OUR J POINTER AND DECREMENT OUR CURRLENGTH
+                currLength--;
+            }
+            
+            maxLength = max(currLength,maxLength);
+        }
+        
+        return maxLength;
+    }

@@ -8,8 +8,12 @@ Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1].
 In this case, 6 units of rain water (blue section) are being trapped.
+N = 6
+arr[] = {3,0,0,2,0,4}
 */
-
+#include<iostream>
+#include<vector>
+using namespace std;
 
 int trap(vector<int>& height) {
     int l = 0, r = height.size()-1, level = 0, water = 0;
