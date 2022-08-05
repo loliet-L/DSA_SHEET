@@ -25,6 +25,9 @@ This is for unique triplets. We want the last instance of the fixed number, if i
 9.Now again, to avoid duplicate triplets, we have to navigate to last occurences of num[low] 
 and num[high] respectively. Update the low and high with last occurences of low and high.
 */
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
