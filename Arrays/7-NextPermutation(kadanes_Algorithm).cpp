@@ -1,5 +1,5 @@
-class Solution {
-public:
+#include<bits/stdc++.h>
+using namespace std;
     void nextPermutation(vector<int>& nums) {
         int indx=-1;
         int n = nums.size();
@@ -27,4 +27,4 @@ public:
         }
         
     }
-};
+
