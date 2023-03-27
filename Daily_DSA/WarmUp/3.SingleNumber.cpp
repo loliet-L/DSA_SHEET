@@ -22,12 +22,15 @@ int singleNumber(vector<int>& nums) {
        for(auto i : nums)ans^=i;
        return ans;
     }
+  
 
 int main()
 {
     vector<int> v={1,2,1,2,4};
 
     cout<<singleNumber(v);
+
+    
 
 
 

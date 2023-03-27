@@ -6,6 +6,7 @@
         "xutility": "cpp",
         "map": "cpp",
         "utility": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "xmemory": "cpp"
     }
 }
