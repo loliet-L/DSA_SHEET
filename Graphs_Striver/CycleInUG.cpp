@@ -2,6 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// using BFS 
 bool detect(vector<int> adj[],vector<int>vis,int src)
 {
     queue<pair<int,int>>q;
@@ -35,8 +37,28 @@ bool DetectCycle(vector<int> adj[],int V)
     {
         if(!vis[i])
         {
-            if(DetectCycle(adj,vis,i)) return true;
+            // USING BFS
+            if(detect(adj,vis,i)) return true;
+            //  USING DFS
+            if(dectectUsingDFS(adj,vis,i,-1))return true;
         }
+    }
+    return false;
+}
+
+// USING DFS
+
+bool dectectUsingDFS(vector<int>adj[],vector<int>vis,int src,int parent)
+{
+    vis[src]=1;
+
+    for(auto i:adj[src])
+    {
+        if(!vis[i])
+        {
+            if(dectectUsingDFS(adj,vis,i,src))return true;
+        }
+        else if(i!=parent)return true;
     }
     return false;
 }
